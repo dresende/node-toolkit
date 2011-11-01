@@ -14,7 +14,7 @@ vows.describe("array").addBatch({
 		},
 		"without()": function (topic) {
 			var a = topic.without();
-			assert.equal(a.length, 5);
+			assert.lengthOf(a, 5);
 			assert.equal(a[0], 1);
 			assert.equal(a[1], 2);
 			assert.equal(a[2], 3);
@@ -23,7 +23,7 @@ vows.describe("array").addBatch({
 		},
 		"without(3)": function (topic) {
 			var a = topic.without(3);
-			assert.equal(a.length, 4);
+			assert.lengthOf(a, 4);
 			assert.equal(a[0], 1);
 			assert.equal(a[1], 2);
 			assert.equal(a[2], 4);
@@ -31,7 +31,7 @@ vows.describe("array").addBatch({
 		},
 		"without(3, 2)": function (topic) {
 			var a = topic.without(3, 2);
-			assert.equal(a.length, 3);
+			assert.lengthOf(a, 3);
 			assert.equal(a[0], 1);
 			assert.equal(a[1], 4);
 			assert.equal(a[2], 5);
@@ -50,7 +50,7 @@ vows.describe("array").addBatch({
 		},
 		"grep(/[23]/)": function (topic) {
 			var a = topic.grep(/[23]/);
-			assert.equal(a.length, 2);
+			assert.lengthOf(a, 2);
 			assert.equal(a[0], 2);
 			assert.equal(a[1], 3);
 		}
@@ -60,7 +60,7 @@ vows.describe("array").addBatch({
 		topic: [1,2,null,3,,2,1,undefined],
 		"compact()": function (topic) {
 			var a = topic.compact();
-			assert.equal(a.length, 5);
+			assert.lengthOf(a, 5);
 			assert.equal(a[0], 1);
 			assert.equal(a[1], 2);
 			assert.equal(a[2], 3);
@@ -69,7 +69,7 @@ vows.describe("array").addBatch({
 		},
 		"unique()": function (topic) {
 			var a = topic.unique();
-			assert.equal(a.length, 5);
+			assert.lengthOf(a, 5);
 			assert.equal(a[0], 1);
 			assert.equal(a[1], 2);
 			assert.equal(a[2], null);
@@ -78,7 +78,7 @@ vows.describe("array").addBatch({
 		},
 		"compact().unique()": function (topic) {
 			var a = topic.compact().unique();
-			assert.equal(a.length, 3);
+			assert.lengthOf(a, 3);
 			assert.equal(a[0], 1);
 			assert.equal(a[1], 2);
 			assert.equal(a[2], 3);
