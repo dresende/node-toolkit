@@ -6,6 +6,22 @@ extensions such as formatting a number or comparing dates or even padding a stri
 Before suggesting any extension, check if native objects don't have them already. For example,
 `Array.map` and `Array.filter` are already in the core.
 
+## Usage
+
+Install:
+
+    npm install tk
+
+Initialize:
+
+    require("tk").extendNative();
+
+Use:
+
+    console.log([ 1, 2, 3, 4 ].first(2)); // prints [ 1, 2 ]
+
+## API
+
 Here is a list (possibly not up-to-date) of the extensions:
 
 ### Array
@@ -20,6 +36,7 @@ Here is a list (possibly not up-to-date) of the extensions:
 - .grep(/re/)
 - .min()
 - .max()
+- .multisort(key1, "asc", key2, "desc", ...)
 
 ### Date
 
@@ -53,6 +70,17 @@ Here is a list (possibly not up-to-date) of the extensions:
 - .round([n])
 - .format([ decimals [, decimal_separator [, thousands_separator ]]])
 - .duration([ format ])
+- .bin([ pad ])
+- .oct([ pad ])
+- .hex([ pad ])
+
+### Object
+
+- .keys()
+- .isset(key)
+- .unset(key)
+- .watch(key, cb)
+- .unwatch(key)
 
 ### String
 
