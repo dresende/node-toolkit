@@ -20,6 +20,10 @@ Use:
 
     console.log([ 1, 2, 3, 4 ].first(2)); // prints [ 1, 2 ]
 
+Test:
+
+    vows --spec tests/*
+
 ## API
 
 Here is a list (possibly not up-to-date) of the extensions:
@@ -87,15 +91,36 @@ Here is a list (possibly not up-to-date) of the extensions:
 
 ### Date
 
-- .addHour(n)
-- .addDay(n)
-- .addWeek(n)
-- .addMonth(n)
-- .addYear(n)
-- .before(date)
-- .after(date)
-- .between(start, end)
-- .diff(date)
+#### .addHour(n)
+#### .addDay(n)
+#### .addWeek(n)
+#### .addMonth(n)
+#### .addYear(n)
+
+    var dt = new Date();
+    dt.addDay()
+    // returns a new Date representing tomorrow
+    dt.addDay(2)
+    // returns a new Date representing after tomorrow
+    dt.addDay(-1)
+    // returns a new Date representing yesterday
+
+#### .before(date)
+#### .after(date)
+#### .between(start, end)
+
+    var dt1 = new Date(), dt2 = dt1.addDay(), dt3 = dt1.addDay(-1);
+
+    dt1.after(dt2)                     // it's not, it's before
+    dt1.before(dt2)                    // yes it is
+    dt1.between(dt2, dt3)              // yes too
+    
+#### .diff(date)
+
+    var dt1 = new Date(), dt2 = dt1.addDay();
+
+    dt1.diff(dt2)                      // -86400000 (miliseconds)
+    dt2.diff(dt1)                      // 86400000 (miliseconds)
 
 ### Function
 
