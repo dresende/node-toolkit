@@ -28,8 +28,8 @@ Here is a list (possibly not up-to-date) of the extensions:
 
 - .first([ n ])
   
-      [ 1, 2, 3, 4 ].first()                        // prints 1
-      [ 1, 2, 3, 4 ].first(2)                       // prints [ 1, 2 ]
+  `[ 1, 2, 3, 4 ].first()                        // prints 1`
+  `[ 1, 2, 3, 4 ].first(2)                       // prints [ 1, 2 ]`
   
 - .last([ n ])
   
