@@ -48,14 +48,15 @@ vows.describe("number").addBatch({
 	"A range(5, 10)": {
 		topic: Number.range(5, 10),
 		"has 5 elements": function (topic) {
-			assert.equal(topic.length, 5);
+			assert.equal(topic.length, 6);
 		},
-		"it's 5..9": function (topic) {
+		"it's 5..10": function (topic) {
 			assert.equal(topic[0], 5);
 			assert.equal(topic[1], 6);
 			assert.equal(topic[2], 7);
 			assert.equal(topic[3], 8);
 			assert.equal(topic[4], 9);
+			assert.equal(topic[5], 10);
 		}
 	},
 	"A range(5, 10, 2)": {
