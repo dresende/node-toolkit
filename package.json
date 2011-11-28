@@ -23,6 +23,6 @@
 		"url": "http://github.com/dresende/node-toolkit/raw/master/LICENSE"
 	}],
 	"scripts": {
-		"text": "vows tests/*"
+		"text": "vows --spec test/*"
 	}
 }
