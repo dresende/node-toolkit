@@ -1,25 +1,28 @@
 {
-	"name"			: "tk",
-	"version"		: "0.1.0",
-	"description"	: "ECMA5 Core Object extensions",
-	"keywords"		: [
+	"name": "tk",
+	"version": "0.1.0",
+	"description": "ECMA5 Core Object extensions",
+	"keywords": [
 		"toolkit",
 		"extend"
 	],
-	"author"	: "Diogo Resende <dresende@thinkdigital.pt>",
-	"engines"		: {
-		"node"	: ">= 0.6.0"
+	"author": "Diogo Resende <dresende@thinkdigital.pt>",
+	"engines": {
+		"node": ">= 0.6.0"
 	},
-	"repository"	: {
-		"type"	: "git",
-		"url"	: "http://github.com/dresende/node-toolkit.git"
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/dresende/node-toolkit.git"
 	},
-	"directories"	: {
-		"lib"		: "./lib"
+	"directories": {
+		"lib": "./lib"
 	},
-	"main"			: "./lib/index",
-	"licenses"		: [{
-		"type"	: "MIT",
-		"url"	: "http://github.com/dresende/node-toolkit/raw/master/LICENSE"
-	}]
+	"main": "./lib/index",
+	"licenses": [{
+		"type": "MIT",
+		"url": "http://github.com/dresende/node-toolkit/raw/master/LICENSE"
+	}],
+	"scripts": {
+		"text": "vows tests/*"
+	}
 }
