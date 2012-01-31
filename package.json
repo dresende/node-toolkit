@@ -1,6 +1,6 @@
 {
 	"name": "tk",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "ECMA5 Core Object extensions",
 	"keywords": [
 		"toolkit",
@@ -23,6 +23,6 @@
 		"url": "http://github.com/dresende/node-toolkit/raw/master/LICENSE"
 	}],
 	"scripts": {
-		"text": "vows --spec test/*"
+		"test": "vows --spec test/*"
 	}
 }
